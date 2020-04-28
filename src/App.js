@@ -7,11 +7,12 @@ import {
 /* Inconsistent use of ; at the end of imports */
 import NavigationDrawer from './components/navigationDrawer';
 import Home from './pages/home';
-/* QuestionOneWrapper was imported as QuestionOne. Which is a different component. This can lead to unnecessary confusion.
+/* QuestionOneWrapper was imported as QuestionOne. Which is an existing component.
+   Having two components with the same name can lead to unnecessary confusion.
    Stick to named exports as they are easier to refactor, and are less likely to cause issues like this.
 */
 import { QuestionOneWrapper } from './pages/questionOne';
-import QuestionTwo from './pages/questionTwo';
+import { QuestionTwoWrapper } from './pages/questionTwo';
 import QuestionThree from './pages/questionThree';
 import QuestionFour from './pages/questionFour';
 import AppBar from './components/header';
@@ -29,7 +30,7 @@ function App() {
               <QuestionOneWrapper/>
             </Route>
             <Route path="/questionTwo">
-              <QuestionTwo />
+              <QuestionTwoWrapper />
             </Route>
             <Route path="/questionThree">
               <QuestionThree />

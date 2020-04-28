@@ -1,7 +1,7 @@
-import React from 'react'
-import Question from './question'
-import QuestionOne from './questionOne'
-import ErrorBoundary from '../../components/errorBoundary'
+import React from 'react';
+import Question from './question';
+import { QuestionOne } from './questionOne';
+import ErrorBoundary from '../../components/errorBoundary';
 
 const QuestionOneWrapper = () =>{
 	return (
@@ -10,4 +10,4 @@ const QuestionOneWrapper = () =>{
 		</ErrorBoundary>
 	)
 }
-export default QuestionOneWrapper
+export { QuestionOneWrapper };

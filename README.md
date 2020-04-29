@@ -1,3 +1,15 @@
+## Reviewing instructions / branching structure
+
+Responses for questions 1 to 4 have been made in seperate branches which are now merged into master. To review please use the respective pull request for an overview of the changes made. Comments have been included with every change for the purpose of this test. Normally these comments would go in the PR its self as a part of the review process.
+
+[Question 1](https://github.com/gruckion/sensyne-health-front-end-test/pull/1/files)
+
+[Question 2](https://github.com/gruckion/sensyne-health-front-end-test/pull/2/files)
+
+[Question 3](https://github.com/gruckion/sensyne-health-front-end-test/pull/3/files)
+
+[Question 4](https://github.com/gruckion/sensyne-health-front-end-test/pull/4/files)
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts

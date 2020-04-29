@@ -1,17 +1,21 @@
 import React from 'react';
-import './App.css';
 import {
   BrowserRouter as Router,
   Switch,
   Route,
 } from "react-router-dom";
-import NavigationDrawer from './components/navigationDrawer'
+/* Inconsistent use of ; at the end of imports */
+import NavigationDrawer from './components/navigationDrawer';
 import Home from './pages/home';
-import QuestionOne from './pages/questionOne'
-import QuestionTwo from './pages/questionTwo'
-import QuestionThree from './pages/questionThree'
-import QuestionFour from './pages/questionFour'
-import AppBar from './components/header'
+/* QuestionOneWrapper was imported as QuestionOne. Which is a different component. This can lead to unnecessary confusion.
+   Stick to named exports as they are easier to refactor, and are less likely to cause issues like this.
+*/
+import { QuestionOneWrapper } from './pages/questionOne';
+import QuestionTwo from './pages/questionTwo';
+import QuestionThree from './pages/questionThree';
+import QuestionFour from './pages/questionFour';
+import AppBar from './components/header';
+import './App.css';
 
 function App() {
   return (
@@ -22,7 +26,7 @@ function App() {
         <div style={{flex: 1, overflow:'auto'}}>
           <Switch>
             <Route path="/questionOne">
-              <QuestionOne/>
+              <QuestionOneWrapper/>
             </Route>
             <Route path="/questionTwo">
               <QuestionTwo />

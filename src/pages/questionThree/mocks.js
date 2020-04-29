@@ -9,20 +9,20 @@ import UUID from "uuid/v4";
 const defaultMock = {
 	species: 'Human',
 	name : 'Jon Snow',
-	icon: AcUnit,
+	// Icon needs to be capital as it is a component.
+	Icon: AcUnit,
 	description: 'You know nothing, Jon Snow.'
 };
 
+/* By default the equality operator is creating rowData as a reference to defaultMock, not a new object
+   To fix this we return a new object and set the properties within as before.
+*/
+const createRowData = ({name, species, Icon, description}) => ({
+	id: UUID(),
+	name: name ? name : defaultMock.name,
+	species: species ? species : defaultMock.species,
+	Icon: Icon ? Icon : defaultMock.Icon,
+	description: description ? description : defaultMock.description
+});
 
-const createRowData = ({name, species, Icon, description}) => {
-	let rowData = defaultMock;
-	rowData.id = UUID();
-	rowData.name = name ? name: rowData.name;
-	rowData.species = species ? species: rowData.species;
-	rowData.icon = Icon ? Icon : rowData.icon;
-	rowData.description = description ? description : rowData.description;
-	return rowData
-}
-
-
-export { createRowData }
+export { createRowData };
